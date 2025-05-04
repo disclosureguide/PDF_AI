@@ -8,7 +8,7 @@ image_path = r"/Users/danieltuttle/projects/pdf_ai/comic.jpg"
 extractor = TextImageExtractor(image_path)
 text = extractor.run()
 
-summarizer = AiSummarizer(text)
-text = summarizer.summarize(50)
+ai = AiSummarizer(text)
+text = ai.summarize(50)
 # Display the extracted text
 print(text)
