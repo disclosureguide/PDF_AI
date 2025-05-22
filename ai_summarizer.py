@@ -24,7 +24,7 @@ class AiSummarizer:
         """
         try:
             # Create the prompt for summarization
-            prompt = f"""Please summarize the following text in less than {number_of_words} words. 
+            prompt = f"""Summarize the following text in less than {number_of_words} words. 
             Keep the most important information while maintaining coherence.
             
             Text to summarize:
@@ -35,7 +35,7 @@ class AiSummarizer:
             # Generate the summary using GPT4All
             response = self.model.generate(
                 prompt=prompt,
-                max_tokens=number_of_words * 4,  # Providing some buffer for generation
+                max_tokens=number_of_words * 100,  # Providing some buffer for generation
                 temp=0.7,
                 top_k=40,
                 top_p=0.4,

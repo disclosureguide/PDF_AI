@@ -1,6 +1,6 @@
 import PyPDF2
 
-class TestPdfExtractor:
+class TextPdfExtractor:
     def __init__(self, file_path):
         """
         Initialize the TestPdfExtractor with a PDF file path.

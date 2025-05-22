@@ -1,9 +1,9 @@
 from ai_summarizer import AiSummarizer
-from test_pdf_extractor import TestPdfExtractor
-from text_image_extractor import TextImageExtractor
+from pdf.text_pdf_extractor import TextPdfExtractor
+from pdf.text_image_extractor import TextImageExtractor
 
 # Define the image path
-image_path = r"/Users/danieltuttle/projects/pdf_ai/comic.jpg"
+image_path = r"/Users/danieltuttle/projects/pdf_ai/data/comic.jpg"
 pdf_path = r"/Users/danieltuttle/projects/pdf_ai/Seattle.pdf"
 
 # Create an instance of TextImageExtractor and extract the text
@@ -13,11 +13,11 @@ text = extractor.run()
 ai = AiSummarizer(text)
 text = ai.summarize(50)
 
-te = TestPdfExtractor(pdf_path)
-pdf_text = te.run()
+# te = TextPdfExtractor(pdf_path)
+# pdf_text = te.run()
 
-ai = AiSummarizer(pdf_text)
-pdf_text = ai.summarize(50)
+# ai = AiSummarizer(pdf_text)
+# pdf_text = ai.summarize(50)
 
 # print(text)
-print(pdf_text)
+print(text)
