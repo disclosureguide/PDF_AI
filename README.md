@@ -62,6 +62,5 @@ This is optional, but recommended for robust production environments.
 
 To build and run your container:
 ```sh
-docker build -t my-fastapi-app .
-docker run -p 8000:8000 my-fastapi-app
+docker build -t my-fastapi-app .; docker run -p 8000:8000 my-fastapi-app;
 ``` 
